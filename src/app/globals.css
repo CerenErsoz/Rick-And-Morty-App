@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: black;
   color: #333;
 }
 
@@ -14,7 +14,6 @@ h1 {
   color: #1e90ff;
 }
 
-/* Liste stili */
 ul {
   list-style: none;
   padding: 0;
@@ -25,7 +24,7 @@ ul {
 li {
   background-color: white;
   margin: 10px 0;
-  padding: 15px;
+  padding: 10px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
@@ -45,10 +44,82 @@ a:hover {
   color: #1e90ff;
 }
 
-/* Yükleme ve hata mesajları */
 div {
   text-align: center;
   margin-top: 20px;
   font-size: 1.2em;
   color: #666;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #1e90ff;
+  color: white;
+  padding: 10px 15px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #0073e6;
+}
+
+.pagination span {
+  font-size: 1.2em;
+}
+
+.navbar {
+  background-color: #6ccfcb;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo img {
+  max-height: 50px;
+}
+
+.navbar .navbar-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar .navbar-menu li {
+  display: inline;
+  margin: 0 15px; 
+}
+
+.navbar .navbar-menu a {
+  color: #6ccfcb;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+}
+
+.navbar .navbar-menu a:hover {
+  color: #ffe501;
 }

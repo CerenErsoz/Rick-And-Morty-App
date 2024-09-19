@@ -1,4 +1,6 @@
 import './globals.css';
+import Navbar from './components/Navbar'; 
+import logo from './assest/icon.png';
 
 export const metadata = {
   title: 'Rick and Morty App',
@@ -8,7 +10,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Navbar /> 
+        <main>{children}</main>
+      </body>
     </html>
   );
 }
