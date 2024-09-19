@@ -81,45 +81,47 @@ div {
 .pagination span {
   font-size: 1.2em;
 }
-
 .navbar {
   background-color: #6ccfcb;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center; 
-  justify-content: space-between;
-}
-
-.navbar .logo {
+  padding: 0 10px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  overflow: hidden;
 }
 
-.navbar .logo img {
-  max-height: 50px;
-}
-
-.navbar .navbar-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.navbar .header-content {
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.navbar .navbar-menu li {
-  display: inline;
-  margin: 0 15px; 
+.navbar .header-content img {
+  max-height: 40px;
 }
 
-.navbar .navbar-menu a {
+.nav-buttons {
+  display: flex;
+  align-items: flex-start; /* Align buttons toward the top */
+  gap: 8px;
+  margin-left: auto;
+}
+
+.nav-buttons button {
+  background-color: #ffffff;
   color: #6ccfcb;
-  text-decoration: none;
-  font-size: 1.2em;
-  padding: 10px 15px;
-  transition: color 0.3s ease;
+  border: 2px solid #6ccfcb;
+  border-radius: 12px;
+  padding: 6px 12px;
+  font-size: 0.9em;
+  cursor: pointer;
+  outline: none;
+  white-space: nowrap;
+  transform: translateY(-4px); /* Move buttons upward */
 }
 
-.navbar .navbar-menu a:hover {
+.nav-buttons button:hover {
   color: #ffe501;
 }
