@@ -1,17 +1,50 @@
-/* Genel stil ayarları */
+/* Body and Main Container */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: black;
-  color: #333;
+  background-color: #121212; /* Darker background */
+  color: #f1f1f1; /* Light text for better contrast */
+}
+
+div {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #f1f1f1; /* Adjusted text color */
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 2.5em; /* Larger font size */
   text-align: center;
+  margin-top: 40px; /* Increased margin for spacing */
+  color: #ffeb3b; /* Bright yellow for eye-catching effect */
+}
+
+input {
+  padding: 10px;
+  width: 50%;
+  max-width: 400px;
   margin-top: 20px;
-  color: #1e90ff;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 15px;
+  font-size: 1em;
+}
+
+.main-button {
+  background-color: white; /* Vivid blue */
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main-button:hover {
+  color:#ffe501
 }
 
 ul {
@@ -22,106 +55,137 @@ ul {
 }
 
 li {
-  background-color: white;
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Center items vertically */
+  background-color: #1e1e1e; /* Darker list item background */
+  color: white;
   margin: 10px 0;
   padding: 10px;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Lighter shadow */
   transition: background-color 0.3s ease;
 }
 
 li:hover {
-  background-color: #f0f0f0;
+  background-color: #333; /* Darker hover effect */
 }
 
 a {
+  display: flex; /* Flexbox for link content */
+  align-items: center; /* Center content vertically */
   text-decoration: none;
-  color: #333;
+  color: #03a9f4; /* Matching button color */
   font-weight: bold;
+  width: 100%; /* Take up full width */
 }
 
 a:hover {
-  color: #1e90ff;
+  color: #ffeb3b; /* Hover with bright yellow */
 }
 
-div {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 1.2em;
-  color: #666;
+a img {
+  margin-right: 15px; /* Space between the image and the text */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
+a span {
+  flex: 1; /* Allows the name to take up the remaining space */
+}
+
+/* Pagination */
 .pagination {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
-.pagination button {
-  background-color: #1e90ff;
+/* Prev and Next button styles */
+.pagination-button {
+  background-color: #03a9f4; /* Vivid blue */
   color: white;
   padding: 10px 15px;
   margin: 0 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 25px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 1em;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover transition */
 }
 
-.pagination button:disabled {
-  background-color: #ccc;
+.pagination-button:hover:not(:disabled) {
+  background-color: #0288d1; /* Slightly darker on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.pagination-button:disabled {
+  background-color: #ccc; /* Gray for disabled state */
   cursor: not-allowed;
 }
 
-.pagination button:hover:not(:disabled) {
-  background-color: #0073e6;
-}
-
+/* Page number text */
 .pagination span {
-  font-size: 1.2em;
+  font-size: 0.9em; /* Reduced font size */
+  color: #f1f1f1; /* Light color for the page text */
+  margin: 0 10px;
 }
+
+
+/* Navbar genel stil */
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
   background-color: #6ccfcb;
-  padding: 0 10px;
+  height: 50px;
+}
+
+/* Sol kısım (logo alanı) */
+.navbar-left {
+  flex: 1;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 60px;
-  overflow: hidden;
 }
 
-.navbar .header-content {
+/* Logo stil */
+.navbar-logo {
+  height: 50px;
+  width: 50px;
+}
+
+/* Sağ kısım (butonlar) */
+.navbar-right {
+  flex: 1;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
+  justify-content: flex-end;
 }
 
-.navbar .header-content img {
-  max-height: 40px;
-}
-
-.nav-buttons {
-  display: flex;
-  align-items: flex-start; /* Align buttons toward the top */
-  gap: 8px;
-  margin-left: auto;
-}
-
-.nav-buttons button {
+/* Butonların genel stili */
+.navbar-button {
   background-color: #ffffff;
-  color: #6ccfcb;
-  border: 2px solid #6ccfcb;
-  border-radius: 12px;
-  padding: 6px 12px;
-  font-size: 0.9em;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
   cursor: pointer;
-  outline: none;
-  white-space: nowrap;
-  transform: translateY(-4px); /* Move buttons upward */
+  font-size: 15px;
+  font-weight: bold;
+  transition: color 0.3s ease; /* Hover geçişi için */
 }
 
-.nav-buttons button:hover {
+/* Buton hover durumu */
+.navbar-button:hover {
   color: #ffe501;
+}
+
+/* İkon stili */
+.navbar-icon {
+  margin-right: 10px;
+  height: 24px;
+  width: 24px;
 }

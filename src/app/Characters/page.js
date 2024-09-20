@@ -46,15 +46,15 @@ const CharacterList = () => {
     <div>
       <h1>Rick and Morty Characters</h1>
       <ul>
-        {characters.map((character) => (
-          <li key={character.id}>
-            <a href={`/character/${character.id}`}>
-              <img src={character.image} alt={character.name} style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
-              {character.name}
-            </a>
-          </li>
-        ))}
-      </ul>
+  {characters.map((character) => (
+    <li key={character.id}>
+      <a href={`/character/${character.id}`}>
+        <img src={character.image} alt={character.name} />
+        <span>{character.name}</span>
+      </a>
+    </li>
+  ))}
+</ul>
 
       {/* Sayfalama butonları */}
       <div className="pagination">

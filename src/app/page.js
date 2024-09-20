@@ -22,23 +22,30 @@ const Main = () => {
   };
 
   return (
-    <div>
-      <h1>Welcome Rick and Morty App!</h1>
+    <div className="main-container">
+      <h1 className="main-title">Welcome Rick and Morty App!</h1>
       <input 
         type="text" 
+        className="main-input"
         placeholder="Search for characters or episodes..." 
         value={query} 
         onChange={(e) => setQuery(e.target.value)} 
       />
-      <button onClick={handleSearch} disabled={loading}>
+      <button 
+        className="main-button" 
+        onClick={handleSearch} 
+        disabled={loading}
+      >
         {loading ? 'Searching...' : 'Search'}
       </button>
-      {error && <p>Error: {error}</p>}
+      {error && <p className="main-error">Error: {error}</p>}
       {results.length > 0 && (
-        <ul>
+        <ul className="main-results">
           {results.map(result => (
-            <li key={result.id}>
-              <a href={`/character/${result.id}`}>{result.name}</a>
+            <li key={result.id} className="main-result-item">
+              <a href={`/character/${result.id}`} className="main-result-link">
+                {result.name}
+              </a>
             </li>
           ))}
         </ul>
